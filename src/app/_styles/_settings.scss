@@ -1,0 +1,38 @@
+$font: "Poppins", serif;
+
+$white: #F4F4F4;
+$dark: #404040;
+$silver: #878787;
+$darkBg: #3C3B3A;
+
+$pageMargin: 100px;
+$elementMargin: 30px;
+
+$filterWhite: invert(100%) sepia(99%) saturate(41%) hue-rotate(148deg) brightness(114%) contrast(91%);
+$filterDark: invert(22%) sepia(0%) saturate(0%) hue-rotate(176deg) brightness(93%) contrast(83%);
+$filterSilver: invert(56%) sepia(0%) saturate(0%) hue-rotate(87deg) brightness(95%) contrast(90%);
+
+$breakpoints: (
+  'lowHi': "(max-height: 928px)",
+  'desktop': "(min-width: 1366px)",
+  'xxxl': "(max-width: 1900px)",
+  'xxl': "(max-width: 1400px)",
+  'xl': "(max-width: 1200px)",
+  'lg': "(max-width: 992px)",
+  'md': "(max-width: 768px)",
+  'sm': "(max-width: 576px)",
+  'lsm': "(max-width: 420px)",
+  'ls': "(orientation: landscape) and (max-height: 500px)",
+  'hiResolution': "(min-resolution: 120dpi) and (min-width: 1366px)"
+);
+
+// $landscapeSmall: "(orientation: landscape) and (max-height: 400px)";
+// $landscape: "(orientation: landscape) and (max-height: 650px)";
+// $fullHD: "(max-width: 1920px)";
+// $smallDesktop: "(max-width: 1366px)";
+// $mobile: "(max-width: 991px)";
+// $smallMobile: "(max-width: 650px)";
+// $small500: "(max-width: 500px)";
+// $small400: "(max-width: 430px)";
+// $lowHeight: "(max-height: 928px)";
+// $desktop: "(min-width: 1366px)";

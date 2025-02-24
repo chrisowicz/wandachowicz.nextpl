@@ -1,0 +1,106 @@
+@use '../_styles/settings' as *;
+@use "sass:map";
+
+
+.heroSection {
+  background: $darkBg;
+  height: 100vh;
+  height: 100dvh;
+ .title {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    color: $dark;
+    font: 100 5vw/1.1 $font;
+    background-color: rgba($white, .7);
+    padding: 20px 60px 20px 40px;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 7vw;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      right: 30px;
+      bottom: 80px;
+      transform: rotate(0);
+      font: 300 10vw/1.1 $font;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 5vw;
+      padding: 30px 30px 30px 40px;
+      bottom: 50px;
+    }
+    .subTitle {
+      font-weight: 400;
+      display: block;
+      color: $dark;
+      font-size: 1.5vw;
+      @media #{map.get($breakpoints, 'lg')} {
+        font-size: 2vw;
+      }
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 4vw;
+      }
+    }
+    &::after {
+      display: none;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+.gallery {
+  text-align: center;
+  h2 {
+    display: block;
+    width: 40%;
+    margin:  auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 200 2vw/1.1 $font;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-size: 3vw;
+      width: 50%;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      width: 70%;
+      font-size: 4vw;
+      line-height: 1.3;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      font-weight: 200;
+      font-size: 7vw;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-weight: 200;
+      font-size: 4vw;
+      width: 50%;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-weight: 200;
+      font-size: 3vw;
+      width: 60%;
+    }
+  }
+  img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

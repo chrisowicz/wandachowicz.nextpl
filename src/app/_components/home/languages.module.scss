@@ -1,0 +1,109 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+
+.languages {
+  background: $white;
+  .firstBG, .secondBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100vh;
+  }
+  .firstBG {
+    background: transparent url('/img/languages-scection-bg.webp') no-repeat center bottom;
+    background-size: cover;
+    z-index: 2;
+    @media #{map.get($breakpoints, 'xxl')} {
+      background-position: -90px 100px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      background-position: -150px 100px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      background-position: 0px 0px;
+    }
+  }
+  .secondBG {
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=cbbbcb&c2=e6e1e6&gt=l&gd=dcl
+    */
+    background: #CBBBCB;
+    // background: linear-gradient(90deg, #CBBBCB, #E6E1E6);
+    background: linear-gradient(45deg, #CBBBCB, #E6E1E6);
+  }
+  .desc {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    @media #{map.get($breakpoints, 'desktop')} {
+      top: 50%;
+      transform: translate(calc(-50% + 200px), -50%);
+      display: block;
+      width: auto;
+      margin-left: 0;
+    }
+    @media #{map.get($breakpoints, 'xxl')} {
+      top: 200px;
+      align-items: center;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      text-align: center;
+      top: 120px;
+      transform: translateX(-50%);
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      top: 150px;
+      transform: translateX(calc(-50% + 150px));
+    }
+    @media #{map.get($breakpoints, 'ls')}{
+      top: 110px;
+      transform: translateX(calc(-50% + 120px));
+    }
+    h3 {
+      margin: 0;
+      line-height: 1;
+    }
+    .question {
+      font-size: 6vw;
+      font-weight: 100;
+      white-space: break-spaces;
+      text-transform: uppercase;
+      @media #{map.get($breakpoints, 'desktop')} {
+        font-size: 6.125rem;
+      }
+      @media #{map.get($breakpoints, 'lowHi')} {
+        font-size: 4rem;
+      }
+      @media #{map.get($breakpoints, 'lg')} {
+        font-size: 6vw;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      @media #{map.get($breakpoints, 'ls')}{
+        font-size: 4vw;
+        font-weight: 200;
+      }
+    }
+    .answer {
+      font-size: 2rem;
+      font-weight: 500;
+      font-style: italic;
+      color: $silver;
+      margin-top: 30px;
+      @media #{map.get($breakpoints, 'lg')} {
+        font-size: 4vw;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+      @media #{map.get($breakpoints, 'ls')}{
+        font-size: 2vw;
+      }
+    }
+  }
+}

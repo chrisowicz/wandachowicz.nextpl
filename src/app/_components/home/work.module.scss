@@ -1,0 +1,43 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+
+.work {
+  background-color: $white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding: 100px 0 300px 0;
+  @media #{map.get($breakpoints, 'xxl')} {
+    padding-bottom: 180px;
+  }
+  @media #{map.get($breakpoints, 'lowHi')} {
+    padding: 180px 0;
+  }
+  @media #{map.get($breakpoints, 'lg')} {
+    padding: 140px 0 150px;
+  }
+  @media #{map.get($breakpoints, 'ls')} {
+    padding: 100px 0 120px;
+  }
+  .desc {
+    width: 100%;
+    @media #{map.get($breakpoints, 'desktop')} {
+      margin: 0 200px;
+      width: calc(100% - 400px);
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      padding: 0 30px;
+    }
+  }
+  .more {
+    @media #{map.get($breakpoints, 'ls')} {
+      right: auto;
+      top: auto;
+      left: 50px;
+      bottom: 50px;
+    }
+  }
+}

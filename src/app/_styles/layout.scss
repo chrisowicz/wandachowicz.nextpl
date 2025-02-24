@@ -1,0 +1,778 @@
+@use './settings' as *;
+@use "sass:map";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font: 400 1rem/1.2 $font;
+  color: $dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  #logo {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    display: block;
+    width: 104px;
+    height: 94px;
+    z-index: 11;
+    @media #{map.get($breakpoints, 'lowHi')}, #{map.get($breakpoints, 'lg')} {
+      top: 50px;
+      left: 50px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      top: 30px;
+      left: 30px;
+      width: 66px;
+      height: 60px;
+      .logoSignet {
+        width: 66px;
+        height: 60px;
+      }
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      top: 30px;
+      left: 30px;
+      width: 60px;
+      height: 54px;
+      .logoSignet {
+        width: 60px;
+        height: 54px;
+      }
+    }
+    & {
+      transition: .5s ease-out;
+    }
+    &:hover {
+      transform: rotate(15deg) scale(1.08);
+    }
+  }
+  #menuToggle {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    z-index: 11;
+    cursor: pointer;
+    @media #{map.get($breakpoints, 'lowHi')}, #{map.get($breakpoints, 'lg')} {
+      top: 50px;
+      right: 50px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      top: 30px;
+      right: 30px;
+      height: 60px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      top: 30px;
+      right: 30px;
+      height: 43px;
+    }
+  }
+  #menuToggle.close {
+    @media #{map.get($breakpoints, 'md')} {
+      top: 30px;
+      right: 30px;
+      width: 50px;
+      height: 60px;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      top: 30px;
+      right: 30px;
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    
+    }
+  }
+}
+
+
+
+#scroll {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  z-index: 5;
+  @media #{map.get($breakpoints, 'desktop')} {
+    cursor: pointer;
+  }
+  @media #{map.get($breakpoints, 'lowHi')}, #{map.get($breakpoints, 'lg')} {
+    bottom: 50px;
+    right: 50px;
+  }
+  @media #{map.get($breakpoints, 'md')} {
+    right: 30px;
+    bottom: 30px;
+    svg {
+      width: 50px;
+      height: auto;
+    }
+  }
+  @media #{map.get($breakpoints, 'ls')} {
+    right: 30px;
+    bottom: 30px;
+  }
+  #arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 8px;
+    height: 30px;
+  }
+  img {
+    filter: $filterSilver;
+  }
+}
+
+body.meetMe {
+  background-color: $darkBg;
+  color: $white;
+  section {
+    text-align: center;
+  }
+}
+body.competencies {
+  background-color: $dark;
+}
+
+body.afterWork {
+  background-color: $darkBg;
+}
+
+.noScroll {
+  overflow-y: hidden;
+}
+.open {
+  display: block;
+}
+
+#mainNav {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: $white url('/img/menu-bg.jpg') top center no-repeat;
+  background-size: cover;
+  z-index: 9;
+  #langSwitcher {
+    position: absolute;
+    top: 100px;
+    right: 205px;
+    z-index: 11;
+    font: 300 1rem/1 $font;
+    line-height: 55px;
+    color: $dark;
+    cursor: pointer;
+    @media #{map.get($breakpoints, 'lg')} {
+      top: 50px;
+      right: 150px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      top: 30px;
+      right: 80px;
+      line-height: 30px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      top: 30px;
+      right: 100px;
+    }
+  }
+  #nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    @media #{map.get($breakpoints, 'lg')} {
+      display: block;
+      width: calc(100% - 100px);
+      position: absolute;
+      left: 50px;
+      bottom: 140px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      left: 30px;
+      bottom: 100px;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      left: 30px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      bottom: 30px;
+    }
+    li {
+      text-align: right;
+      width: 100%;
+      padding: 20px 0;
+      border-bottom: 0.4px solid rgba($silver, .2);
+      transition: all 0.5s;
+      &:hover {
+        border-bottom-color: rgba($silver, .6);
+      }
+      @media #{map.get($breakpoints, 'lg')} {
+        text-align: left;
+        border-bottom: none;
+      }
+      @media #{map.get($breakpoints, 'sm')} {
+        padding: 14px 0;
+      
+      }
+      @media #{map.get($breakpoints, 'ls')} {
+        padding: 10px 0;
+      
+      }
+      &:nth-child(even) {
+        text-align: left;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      a {
+        display: block;
+        width: 100%;
+        font-weight: 100;
+        font-size: 6rem;
+        line-height: 1;
+        color: $dark;
+        text-transform: uppercase;
+        @media #{map.get($breakpoints, 'xxxl')} {
+          font-size: 4vw;
+        }
+        @media #{map.get($breakpoints, 'lowHi')} {
+          font-size: 2.8vw;
+          font-weight: 200;
+        }
+        @media #{map.get($breakpoints, 'lg')} {
+          font-size: 6vw;
+        }
+        @media #{map.get($breakpoints, 'md')} {
+          font-size: 7vw;
+        }
+        @media #{map.get($breakpoints, 'sm')} {
+          font-size: 6vw;
+          font-weight: 300;
+        }
+        // @media #{map.get($breakpoints, 'lsm')} {
+        //   font-size: 8vw;
+        // }
+        @media #{map.get($breakpoints, 'ls')} {
+          font-size: 4vw;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+  #social {
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 50px;
+    @media #{map.get($breakpoints, 'desktop')} {
+      bottom: 100px;
+    }
+    @media #{map.get($breakpoints, 'lowHi')} {
+      bottom: 50px;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      gap: 30px;
+      bottom: 50px;
+      right: 50px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      left: 30px;
+      bottom: 30px;
+      transform: none;
+      gap: 15px;
+      svg {
+        width: 50px;
+        height: auto;
+      }
+    }
+    @media #{map.get($breakpoints, 'lsm')} {
+      gap: 10px;
+      svg {
+        width: 45px;
+      }
+    
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      gap: 15px;
+      left: auto;
+      right: 30px;
+      transform: none;
+      bottom: 30px;
+      svg {
+        width: 45px;
+        height: auto;
+      }
+    }
+  }
+}
+#mainNav.open {
+  display: flex;
+  position: fixed;
+}
+
+
+
+.more {
+  position: absolute;
+  left: 10%;
+  bottom: 150px;
+  display: block;
+  width: 155px;
+  height: 140px;
+  font-size: 1rem;
+  font-weight: 300;
+  white-space: nowrap;
+  color: $dark;
+  text-align: center;
+  line-height: 120px;
+  transition: transform .5s;
+  
+  z-index: 5;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url('/img/button-bg.svg');
+    filter: $filterDark;
+    width: 155px;
+    height: 140px;
+    transition: transform .5s ease-out;
+  }
+  &:hover {
+    &::after {
+      transform: rotate(15deg) scale(1.08);
+    }
+  }
+  @media #{map.get($breakpoints, 'xxl')}, #{map.get($breakpoints, 'lowHi')} {
+    left: 50px;
+    bottom: 50px;
+    width: 100px;
+    height: 90px;
+    font-size: .8rem;
+    line-height: 80px;
+    &::after {
+      width: 100px;
+      height: 90px;
+    }
+  }
+  @media #{map.get($breakpoints, 'md')} {
+    left: 30px;
+    bottom: 30px;
+  }
+  @media #{map.get($breakpoints, 'ls')} {
+    left: 30px;
+    bottom: 30px;
+    width: 80px;
+    height: 70px;
+    line-height: 64px;
+    &::after {
+      width: 80px;
+      height: 70px;
+    }
+  }
+}
+
+.pin-spacer-langPin {
+  background-color: #f8f8f8;
+}
+
+.desc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  @media #{map.get($breakpoints, 'xxl')} {
+    padding: 0 50px;
+  }
+  @media #{map.get($breakpoints, 'lg')} {
+    width: calc(100% - 100px);
+  }
+  @media #{map.get($breakpoints, 'lsm')} {
+    padding: 0 30px;
+    width: calc(100% - 60px);
+  }
+  @media #{map.get($breakpoints, 'desktop')} {
+    width: 60%;
+    margin-left: 10%;
+  }
+  p {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 1.68rem;
+    line-height: 37px;
+    font-weight: 200;
+    color: $dark;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font: 200 1.4rem/1.3 $font;
+    }
+    @media #{map.get($breakpoints, 'lowHi')} {
+      font: 200 1.4rem/1.3 $font;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      margin-bottom: 15px;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      margin-bottom: 10px;
+    }
+    @media #{map.get($breakpoints, 'lsm')} {
+      font: 200 1.2rem/1.2 $font;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.title {
+  display: block;
+  font-weight: 400;
+  margin: 0; 
+  font-size: 3.43rem;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: normal;
+  @media #{map.get($breakpoints, 'xxl')} {
+    font-size: 3rem;
+  }
+  @media #{map.get($breakpoints, 'lowHi')} {
+    font-size: 2.6rem;
+  }
+  @media #{map.get($breakpoints, 'lg')} {
+    font-size: 4vw;
+  }
+  @media #{map.get($breakpoints, 'md')} {
+    font-size: 6vw;
+  }
+  @media #{map.get($breakpoints, 'ls')} {
+    font-size: 3vw;
+  }
+  span {
+    display: block;
+    margin-bottom: 15px;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.43rem;
+    color: $silver;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 51.5px;
+    height: 3.9px;
+    background-color: $silver;
+    margin: 20px 0 30px 0;
+    @media #{map.get($breakpoints, 'xxxl')} {
+      margin: 5px 0 15px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@keyframes fillBackgroundLeft {
+  0% {
+    width: 0;
+    left: 100%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+@keyframes fillBackgroundRight {
+  0% {
+    width: 0;
+    right: 100%;
+  }
+  100% {
+    width: 100%;
+    right: 0;
+  }
+}
+#projects {
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    @media #{map.get($breakpoints, 'desktop')} {
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    li {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      text-align: right;
+      width: 100%;
+      padding: 20px 0;
+      margin: 25px 0;
+      border-top: 0.4px solid rgba($silver, .6);
+      border-bottom: 0.4px solid rgba($silver, .6);
+      @media #{map.get($breakpoints, 'md')} {
+        text-align: center;
+      }
+      @media #{map.get($breakpoints, 'lowHi')} {
+        text-align: center;
+      }
+      &:nth-child(even) {
+        text-align: left;
+        @media #{map.get($breakpoints, 'md')} {
+          text-align: center;
+        }
+        @media #{map.get($breakpoints, 'lowHi')} {
+          text-align: center;
+        }
+      }
+      @media #{map.get($breakpoints, 'desktop')} {
+        z-index: 2;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($silver, .05);
+          z-index: 1;
+          transition: left 0.3s ease;
+        }
+        &:hover::after {
+          left: 0;
+          animation: fillBackgroundLeft 0.8s ease;
+        }
+        &:nth-child(even):hover::after {
+          left: auto;
+          right: 0;
+          animation: fillBackgroundRight 0.8s ease;
+        }
+      }
+      @media #{map.get($breakpoints, 'xxl')} {
+        padding: 10px 0;
+        margin: 15px 0;
+      }
+      @media #{map.get($breakpoints, 'lowHi')} {
+        padding: 10px 0;
+        margin: 15px 0;
+      }
+      @media #{map.get($breakpoints, 'md')} {
+        border-color: rgba($silver, .6);
+      }
+      a {
+        display: block;
+        width: 100%;
+        font-weight: 100;
+        font-size: 7.5rem;
+        line-height: 1;
+        color: $dark;
+        text-transform: uppercase;
+        @media #{map.get($breakpoints, 'desktop')} {
+          position: relative;
+          z-index: 3;
+        }
+        @media #{map.get($breakpoints, 'xxl')} {
+          font-size: 5vw;
+        }
+        @media #{map.get($breakpoints, 'lowHi')} {
+          font-size: 5vw;
+        }
+        @media #{map.get($breakpoints, 'md')} {
+          font-size: 8vw;
+          // font-weight: 200;
+        }
+      }
+    }
+  }
+}
+
+#bottomHooks {
+  background-color: $darkBg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $white;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    @media #{map.get($breakpoints, 'md')} {
+      margin-top: 140px;
+    }
+  }
+  h3 {
+    font-size: 3.5vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    white-space: break-spaces;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-size: 6vw;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 6vw;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      font-size: 8vw;
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 4vw;
+    }
+  }
+  h4 {
+    font-size: 1.6vw;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    margin: 50px 0 0 0;
+    min-height: 39.31px;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-size: 3vw;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 1.5rem;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 1.3rem;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  }
+  .showProjects {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+    &::after {
+      filter: $filterWhite
+    }
+    @media #{map.get($breakpoints, 'xxl')}, #{map.get($breakpoints, 'lowHi')} {
+      width: 100px;
+      height: 90px;
+      font-weight: 600;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      width: 80px;
+      height: 70px;
+      bottom: 30px;
+    }
+  }
+}
+footer {
+  background-color: $darkBg;
+  display: block;
+  overflow: hidden;
+  color: rgba($white, .4);
+  #bottom {
+    width: calc(100% - 200px);
+    padding: 40px 0 40px;
+    margin: 0 100px;
+    border-top: 0.4px solid rgba($white, .4);
+    display: flex;
+    justify-content: space-between;
+    @media #{map.get($breakpoints, 'xxl')} {
+      width: calc(100% - 100px);
+      margin: 0 50px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      width: calc(100% - 60px);
+      margin: 0 30px;
+      justify-content: center;
+      flex-direction: column;
+      // align-items: center;
+      gap: 10px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      padding: 15px 0;
+    }
+    a {
+      color: rgba($white, .4);
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

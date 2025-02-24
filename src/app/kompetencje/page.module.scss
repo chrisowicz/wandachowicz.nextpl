@@ -1,0 +1,194 @@
+@use '../_styles/settings' as *;
+@use "sass:map";
+
+
+
+.competencesScrollIcon {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  display: block;
+  z-index: 5;
+  cursor: pointer;
+  @media #{map.get($breakpoints, 'xxl')} {
+    right: 50px;
+    bottom: 50px;
+  }
+  @media #{map.get($breakpoints, 'md')}, #{map.get($breakpoints, 'ls')} {
+    right: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: auto;
+  }
+  @media #{map.get($breakpoints, 'lowHi')} {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+.heroSection {
+  background: $darkBg;
+  height: 100vh;
+  height: 100dvh;
+  h1 {
+    color: $white;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    @media #{map.get($breakpoints, 'xxxl')} {
+      font-size: 8vw;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      font-size: 10vw;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'lsm')}{
+      font-size: 11vw;
+      font-weight: 300;
+    }
+  }
+}
+.competenciesPage {
+  padding: 0;
+  h2, h3 {
+    font-size: 4rem;
+    font-weight: 200;
+    margin: 0 0 40px 0;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 4.5vw;
+      font-weight: 400;
+      text-align: center;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      font-size: 5vw;
+      font-weight: 500;
+    }
+    @media #{map.get($breakpoints, 'lsm')}{
+      font-size: 5.5vw;
+      font-weight: 600;
+    }
+    @media #{map.get($breakpoints, 'ls')}{
+      font-size: 4vw;
+      font-weight: 600;
+    }
+  }
+  @media #{map.get($breakpoints, 'sm')} {
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .competenciesDesc {
+    width: 80%;
+    font: 200 1.3vw/1.5 $font;
+    white-space: break-spaces;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media #{map.get($breakpoints, 'xxl')} {
+      font-weight: 300;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 2.5vw;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      font-size: 3vw;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+    @media #{map.get($breakpoints, 'lsm')}{
+      font-size: 3.2vw;
+    }
+    @media #{map.get($breakpoints, 'ls')}{
+      width: 90%;
+      font-size: .6rem;
+      line-height: 1.4;
+    }
+  }
+  .skills {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media #{map.get($breakpoints, 'sm')} {
+      text-align: left;
+    }
+    h3 {
+      position: relative;
+      span {
+        position: absolute;
+        top: 10px;
+        font-size: 1rem;
+        @media #{map.get($breakpoints, 'md')} {
+          font-size: .7rem;
+          top: 2px;
+        }
+      }
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 155px));
+      align-content: center;
+      justify-content: center;
+      gap: 15px;
+      height: 100%;
+      @media #{map.get($breakpoints, 'lg')} {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 120px));
+      }
+      li {
+        position: relative;
+        width: 155px;
+        height: 120px;
+        border: 1px solid $dark;
+        border-radius: 48%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        text-align: center;
+        white-space: break-spaces;
+        @media #{map.get($breakpoints, 'lg')} {
+          width: 120px;
+          height: 92.88px;
+          font-size: .8rem;
+        }
+        span {
+          position: absolute;
+          display: block;
+          left: 50%;
+          transform: translate(-50%, 20px);
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .coding, .webDesign, .workFlow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e1eec3;
+  }
+  .webDesign {
+    background-color: #f1d8b6;
+  }
+  .workFlow {
+    background-color: #ddbaba
+  }
+}

@@ -1,0 +1,130 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+
+.projectHero {
+  height: 100vh;
+  height: 100dvh;
+  .projectHeroTitle, .projectLogo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .projectHeroTitle {
+    width: 80%;
+    font: 100 6vw/1.1 $font;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: break-spaces;
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 7vw;
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 5vw;
+      // font-weight: 300;
+    }
+  }
+  .projectLogo {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    @media #{map.get($breakpoints, 'lg')} {
+      width: 50%;
+      height: 50%;
+    }
+    @media #{map.get($breakpoints, 'sm')} {
+      width: 40%;
+      height: 40%;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+.description {
+  background-color: rgba($silver, .3);
+  // transform: translate(0, 0) !important;
+  .dark {
+    background-color: $darkBg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    p {
+      display: block;
+      width: 60%;
+      color: $white;
+      font: 300 1.5vw/1.5 $font;
+      white-space: normal;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media #{map.get($breakpoints, 'xxl')} {
+        font-size: 2vw;
+      }
+      @media #{map.get($breakpoints, 'lg')} {
+        font-size: 2.5vw;
+      }
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 3vw;
+      }
+      @media #{map.get($breakpoints, 'lsm')} {
+        font-size: 3.5vw;
+        width: 80%;
+      }
+      @media #{map.get($breakpoints, 'ls')}{
+        font-size: 1.6vw;
+        width: 80%;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.gallery {
+  background-color: $dark;
+  img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.video {
+  background-color: $darkBg;
+  position: relative;
+  .player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+}
+.projectLink {
+  text-align: center;
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 200 3vw/1.1 $font;
+    color: $dark;
+    @media #{map.get($breakpoints, 'lg')} {
+      font-size: 6vw;
+      font-weight: 300;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      font-size: 3vw;
+      font-weight: 400;
+    }
+  }
+}

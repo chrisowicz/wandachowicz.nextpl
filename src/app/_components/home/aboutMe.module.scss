@@ -1,0 +1,85 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+.aboutMe {
+  .desc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    @media #{map.get($breakpoints, 'lowHi')} {
+      width: calc(60% - 100px);
+      top: auto;
+      bottom: 150px;
+      transform: translateY(0);
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      width: calc(65% - 100px);
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      // width: calc(100% - 60px);
+      width: 100%;
+      padding: 0 30px;
+      top: 130px;
+      bottom: auto;
+      transform: translateY(0);
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      // width: calc(75% - 100px);
+      width: 70%;
+      padding: 0 30px;
+      top: 100px;
+      bottom: auto
+    }
+    p {
+      @media #{map.get($breakpoints, 'sm')} {
+        font-size: 1.1rem;
+        font-weight: 300;
+      
+      }
+    }
+  }
+  .images {
+    position: absolute;
+    right: 50px;
+    width: calc(100% - 50px);
+    height: 100%;
+    z-index: 1;
+    @media #{map.get($breakpoints, 'lg')} {
+      right: 0;
+      width: 100%;
+    }
+    @media #{map.get($breakpoints, 'ls')}{
+      right: 72px;
+    }
+  }
+  .firstImage, .secondImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media #{map.get($breakpoints, 'xxl')} {
+      width: auto;
+      height: 80vh;
+    }
+    @media #{map.get($breakpoints, 'lowHi')} {
+      width: auto;
+      height: 80vh;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      height: 55vh;
+      right: 0px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      height: 40vh;
+    }
+    @media #{map.get($breakpoints, 'ls')}{
+      height: 80vh;
+    }
+  }
+  .firstImage {
+    opacity: 1;
+  }
+  .secondImage {
+    opacity: 0;
+  }
+}

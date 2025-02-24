@@ -1,0 +1,75 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+.heroSection {
+  background: 
+  linear-gradient(to bottom,  
+    rgba(222,222,222,1) 0%,
+    rgba(244,244,244,1) 50%,
+    rgb(255, 255, 255) 75%,
+    rgb(228, 228, 228) 100%);
+  height: 100vh;
+  height: 100dvh;
+  h2 {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: block;
+    font-weight: 100;
+    margin: 0;
+    font-size: 8vw;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: pre-line;
+    z-index: 2;
+    @media #{map.get($breakpoints, 'desktop')} {
+      left: 150px;
+      bottom: 200px;
+    
+    }
+    @media #{map.get($breakpoints, 'lowHi')} {
+      bottom: 80px;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      left: 80px;
+      font-size: 10vw;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      left: 30px;
+      font-size: 11vw;
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      left: 60px;
+      bottom: 60px;
+      font-size: 6vw;
+    }
+    span {
+      display: block;
+      margin: 0 0 25px 10px;
+      text-transform: none;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 2rem;
+      color: $silver;
+      @media #{map.get($breakpoints, 'xl')} {
+        margin-left: 6px;
+      }
+      @media #{map.get($breakpoints, 'lg')} {
+        font-size: 3vw;
+      }
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 4vw;
+        margin: 0 0 10px 5px;
+      }
+      @media #{map.get($breakpoints, 'ls')} {
+        font-size: 2vw;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .blob {
+    width: 100%;
+    height: 100%;
+  }
+}

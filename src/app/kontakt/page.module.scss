@@ -1,0 +1,49 @@
+@use '../_styles/settings' as *;
+@use "sass:map";
+
+.heroContact {
+  height: 100vh;
+  height: 100dvh;
+  h1, h2, a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font: 100 3vw/1.1 $font;
+    color: $dark;
+    display: block;
+    margin: 0;
+    white-space: nowrap;
+    @media #{map.get($breakpoints, 'xxl')} {
+      font: 100 4vw/1.1 $font;
+    }
+    @media #{map.get($breakpoints, 'lg')} {
+      font-weight: 200;
+    }
+    @media #{map.get($breakpoints, 'lsm')} {
+      font-size: 6vw;
+    }
+  }
+  a {
+    @media #{map.get($breakpoints, 'md')} {
+      font-size: 5vw;
+      line-height: 80px;
+    }
+    @media #{map.get($breakpoints, 'lsm')} {
+      font-size: 8vw;
+    }
+  }
+}
+// .social {
+//   display: flex;
+//   justify-content: center;
+//   gap: 30px;
+//   padding: 100px;
+//   @media #{$mobile } {
+//     padding: 100px 50px;
+//   }
+//   a {
+//     img {
+//       filter: $filterSilver;
+//     }
+//   }
+// }

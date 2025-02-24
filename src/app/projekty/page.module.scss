@@ -1,0 +1,29 @@
+@use '../_styles/settings' as *;
+@use "sass:map";
+
+
+.content {
+  height: auto;
+  width: 80%;
+  margin: 350px auto 100px;
+  @media #{map.get($breakpoints, 'xxl')} {
+    margin-top: 250px;
+  }
+  @media #{map.get($breakpoints, 'lowHi')} {
+    margin-top: 180px;
+  }
+  @media #{map.get($breakpoints, 'lg')} {
+    margin: 150px auto 50px auto;
+    width: calc(100% - 100px);
+  }
+  @media #{map.get($breakpoints, 'md')} {
+    width: calc(100% - 60px);
+    margin: 150px auto 30px auto;
+  }
+  @media #{map.get($breakpoints, 'lsm')} {
+    width: calc(100% - 60px);
+  }
+  @media #{map.get($breakpoints, 'ls')} {
+    margin-top: 110px;
+  }
+}

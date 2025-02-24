@@ -1,0 +1,67 @@
+@use '../../_styles/settings' as *;
+@use "sass:map";
+
+.futureSite {
+  background-color: $darkBg;
+  .desc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    @media #{map.get($breakpoints, 'lowHi')}, #{map.get($breakpoints, 'lg')} {
+      width: calc(100% - 100px);
+      // top: auto;
+      // bottom: 100px;
+      // transform: translateY(0);
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      width: calc(100% - 60px);
+      padding: 0 30px;
+      top: 140px;
+      bottom: auto;
+      transform: translateY(0);
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      width: calc(90% - 100px);
+      bottom: 30px;
+    }
+    h2 {
+      color: $white;
+    }
+    p {
+      color: $white;
+      @media #{map.get($breakpoints, 'lsm')} {
+        font-size: 1.2rem;
+        font-weight: 300; 
+      
+      }
+    }
+  }
+  .futureSiteBg {
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+    @media #{map.get($breakpoints, 'xxl')} {
+      max-width: 200px;
+      height: auto;
+      right: 100px;
+      bottom: 50px;
+    }
+    @media #{map.get($breakpoints, 'lowHi')}, #{map.get($breakpoints, 'lg')} {
+      max-width: 140px;
+      height: auto;
+      right: 50px;
+      bottom: 50px;
+    }
+    @media #{map.get($breakpoints, 'md')} {
+      right: 30px;
+      bottom:30px;
+      max-width: 100px;
+    }
+    @media #{map.get($breakpoints, 'ls')} {
+      right: 30px;
+      bottom:30px;
+      max-width: 80px;
+    }
+  }
+}

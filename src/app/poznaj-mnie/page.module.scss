@@ -1,0 +1,95 @@
+@use '../_styles/settings' as *;
+@use "sass:map";
+
+  .slideOne {
+    height: 100vh;
+    height: 100dvh;
+    h1 {
+      width: 80%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: 100 6vw/1.1 $font;
+      margin: 0;
+      text-transform: uppercase;
+      white-space: break-spaces;
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 10vw;
+        font-weight: 200;
+        width: calc(100% - 90px);
+        padding: 0 45px;
+      }
+      .first, .second {
+        opacity: 0;
+        display: block;
+      }
+      .second {
+        margin-top: 50px;
+        text-transform: none;
+        font-size: 4vw;
+        @media #{map.get($breakpoints, 'md')} {
+          font-size: 5vw;
+          margin-top: 15px;
+        }
+        @media #{map.get($breakpoints, 'ls')} {
+          margin-top: 20px;
+        }
+      }
+    }
+
+  }
+  .slideTwo {
+    h2 {
+      width: 80%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: 100 6vw/1.1 $font;
+      margin: 0;
+      text-transform: uppercase;
+      white-space: break-spaces;
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 10vw;
+        font-weight: 200;
+        width: calc(100% - 90px);
+        padding: 0 45px;
+      }
+    }
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .slideFive {
+    h2 {
+      width: 80%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: 100 6vw/1.1 $font;
+      margin: 0;
+      text-transform: uppercase;
+      white-space: break-spaces;
+      @media #{map.get($breakpoints, 'md')} {
+        font-size: 10vw;
+        font-weight: 200;
+      }
+    }
+    .white {
+      background-color: $white;
+      width: 100%;
+      height: 100%;
+      h2 {
+        color: $dark;
+      }
+    }
+  }
