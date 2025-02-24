@@ -16,17 +16,17 @@ export function ClientProjects({ projects }) {
 
   return (
     <>
-      <Header />
+      <Header langSwitcher={'/projects'}/>
       <section className={styles.content}>
         <h1 className="title">
-          <span className="subTitle">My realizations</span>
-          Projects
+          <span className="subTitle">Moje realizacje</span>
+          Projekty
         </h1>
         <div id="projects">
           <ul>
             {projects.map(project => (
               <li key={project.id}>
-                <Link href={`/projects/${project.slug}`}>
+                <Link href={`/projekty/${project.slug}`}>
                   {project?.listTitle || project?.title}
                 </Link>
               </li>
@@ -34,7 +34,7 @@ export function ClientProjects({ projects }) {
           </ul>
         </div>
       </section>
-      <BottomHooks HooksHeading="Every end" HooksSpan="Gives a new beginning, project" />
+      <BottomHooks HooksHeading="Każdy koniec" HooksSpan="Daje nowy początek, projekt ;)" />
     </>
   )
 }

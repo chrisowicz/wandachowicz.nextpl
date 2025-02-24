@@ -16,46 +16,46 @@ export function ClientPrivacyPolicy() {
 
   return (
     <>
-      <Header /> 
+      <Header langSwitcher={'/privacy-policy'}/> 
       <section className={styles.article}>
-        <h1>Privacy Policy and Cookies — wandachowicz.com</h1>
+        <h1>Polityka prywatności i pliki cookies — wandachowicz.com</h1>
         <div>
-          <h2>Introduction</h2>
+          <h2>Wprowadzenie</h2>
           <p>
-            Your privacy is very important to me. This Privacy Policy describes what personal data I collect, how I process it, and your rights in relation to your personal data. The website is operated by Chris Wandachowicz, a freelance programmer, graphic designer, and UI/UX designer.
+            Twoja prywatność jest dla mnie bardzo ważna. Niniejsza Polityka Prywatności opisuje, jakie dane osobowe gromadzę, w jaki sposób je przetwarzam oraz jakie przysługują Ci prawa w odniesieniu do Twoich danych osobowych. Strona jest prowadzona przez Krzyśka Wandachowicza, freelancera – programistę, grafika oraz projektanta UI/UX.
           </p>
-          <h2>Data I Collect</h2>
+          <h2>Gromadzone dane</h2>
           <p>
-            My website does not collect any personal data, except for statistical data gathered by the <Link href="https://umami.is/" target="_blank" rel="noopener noreferrer">Umami</Link> analytics tool.  
-            This data is collected for analytical purposes to better understand how the website is used and to enable improvements.  
-            Umami ensures the anonymity of collected data and does not use cookies.  
-            Additionally, Cloudflare, which protects and optimizes this website, may collect basic analytics data,  
-            such as IP addresses, browser types, and general traffic patterns for security and performance purposes.  
-            More details can be found in Cloudflare’s Privacy Policy: <Link href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</Link>.
+            Moja strona nie gromadzi żadnych danych osobowych, poza danymi statystycznymi zbieranymi przez narzędzie analityczne <Link href="https://umami.is/" target="_blank" rel="noopener noreferrer">Umami</Link>.  
+            Dane te są gromadzone w celach analitycznych, aby lepiej zrozumieć sposób korzystania ze strony i umożliwić jej ulepszanie.  
+            Umami zapewnia anonimowość zbieranych danych i nie wykorzystuje plików cookies.  
+            Dodatkowo, Cloudflare, które chroni i optymalizuje tę stronę, może zbierać podstawowe dane analityczne,  
+            takie jak adresy IP, typy przeglądarek czy ogólne wzorce ruchu w celu zapewnienia bezpieczeństwa i wydajności.  
+            Więcej informacji znajduje się w Polityce Prywatności Cloudflare: <Link href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</Link>.
           </p>
 
-          <h2>Cookies</h2>
+          <h2>Pliki cookies</h2>
           <p>
-            My website does not use cookies for analytical purposes, as the Umami tool operates without them.  
-            This ensures that using my website remains privacy-friendly.  
-            However, Cloudflare may set technical cookies necessary for security and performance enhancement.  
-            These cookies help identify and mitigate malicious traffic without tracking users’ browsing behavior.  
+            Moja strona nie używa plików cookies do celów analitycznych, ponieważ narzędzie Umami działa bez nich.  
+            Dzięki temu korzystanie z mojej strony pozostaje przyjazne dla prywatności.  
+            Jednak Cloudflare może ustawiać techniczne pliki cookies niezbędne do zapewnienia bezpieczeństwa i poprawy wydajności.  
+            Te pliki cookies pomagają wykrywać i ograniczać złośliwy ruch, nie śledząc przy tym zachowań użytkowników.
           </p>
-          <h2>Your Rights</h2>
+          <h2>Twoje prawa</h2>
           <p>
-            Since my website does not collect or store personal data of users, there is no need to exercise rights related to access, correction, deletion, restriction of processing, or objection to the processing of personal data in the context of this site.
+            Ponieważ moja strona nie gromadzi ani nie przechowuje danych osobowych użytkowników, nie ma potrzeby korzystania z praw dotyczących dostępu, sprostowania, usunięcia, ograniczenia przetwarzania ani sprzeciwu wobec przetwarzania danych osobowych w kontekście tej witryny.
           </p>
-          <h2>Changes to the Privacy Policy</h2>
+          <h2>Zmiany w Polityce Prywatności</h2>
           <p>
-            I may update my Privacy Policy as needed. Any changes will be posted on this page. I recommend regularly reviewing this page to stay informed of any updates.
+            Mogę aktualizować moją Politykę Prywatności w miarę potrzeb. Wszelkie zmiany będą publikowane na tej stronie. Zalecam regularne jej przeglądanie, aby być na bieżąco z ewentualnymi zmianami.
           </p>
-          <h2>Contact</h2>
+          <h2>Kontakt</h2>
           <p>
-            If you have any questions about my Privacy Policy, please <Link href="/contact" className='contact'>contact</Link> to me.
+            Jeśli masz jakiekolwiek pytania dotyczące mojej Polityki Prywatności, proszę <Link href="/kontakt" className="contact">skontaktuj się</Link> ze mną.
           </p>
         </div>
       </section>
-      <BottomHooks HooksHeading="Rules are made to be broken" HooksSpan="Not applicable to typography ;)" />
+      <BottomHooks HooksHeading="Zasady są po to, żeby je łamać" HooksSpan="Nie dotyczy typografii ;)" />
     </>
   );
 }

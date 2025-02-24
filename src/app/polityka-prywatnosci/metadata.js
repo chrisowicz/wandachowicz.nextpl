@@ -1,12 +1,12 @@
 import { siteConfig } from "../_config/siteConfig";
 
 export const generateMetadata = () => ({
-  title: "Privace and Cookies Policy — Krzysiek Wandachowicz",
-  description: "Read the privacy and cookie policy — wandachowicz.com",
+  title: "Polityka prywatności i cookies — Krzysiek Wandachowicz",
+  description: "Poznaj politykę prywatności na wandachowicz.com",
   openGraph: {
-    title: "Privace and Cookies Policy — Krzysiek Wandachowicz",
-    description: "Read the privacy and cookie policy — wandachowicz.com",
-    url: `${siteConfig.domain}/privacy-policy`,
+    title: "Polityka prywatności i cookies — Krzysiek Wandachowicz",
+    description: "Poznaj politykę prywatności na wandachowicz.com",
+    url: `${siteConfig.domain}/polityka-prywatnosci`,
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/privacyPolicy.webp`,

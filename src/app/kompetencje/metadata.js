@@ -1,12 +1,12 @@
 import { siteConfig } from "../_config/siteConfig";
 
 export const generateMetadata = () => ({
-  title: "Discover my competencies — Krzysiek Wandachowicz",
-  description: "Explore my skills and what I excel at. Learn about my ambitions and the direction of my growth.",
+  title: "Poznaj moje kompetencje — Krzysiek Wandachowicz",
+  description: "Poznaj moje skille, czyli w czym czuje się mocny. Dowiedz się czego chcę, poznaj kierunek mojego rozwoju.",
   openGraph: {
-    title: "Discover my competencies — Krzysiek Wandachowicz",
-    description: "Explore my skills and what I excel at. Learn about my ambitions and the direction of my growth.",
-    url: `${siteConfig.domain}/competencies`,
+    title: "Poznaj moje kompetencje — Krzysiek Wandachowicz",
+    description: "Poznaj moje skille, czyli w czym czuje się mocny. Dowiedz się czego chcę, poznaj kierunek mojego rozwoju.",
+    url: `${siteConfig.domain}/kompetencje`,
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/competencies.webp`,

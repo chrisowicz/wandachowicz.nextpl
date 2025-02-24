@@ -335,7 +335,7 @@ export function ClientProjectDetails({ project }) {
 
   return (
     <>
-      <Header />
+      <Header langSwitcher={`/projects/${project.slug}`}/>
       <section className={styles.projectHero} ref={HeroRef}>
         <h1 className={styles.projectHeroTitle} ref={HeroTitleRef} style={{ transform: "translate(-50%, -50%) scale(0)", opacity: 0 }}>{project.title}</h1>
         <img className={styles.projectLogo} ref={HeroLogoRef} src={project.logo} alt={project.title} style={{ transform: "translate(-50%, -50%) scale(0)", opacity: 0 }} />
@@ -348,8 +348,8 @@ export function ClientProjectDetails({ project }) {
       <section className={styles.gallery} ref={galleryRef}>
         {project.gallery.map((image, index) => (
           <picture key={index}>
-            <source media="(max-width: 650px)" srcSet={`/projects/${image}-mobi.webp`}/>
-            <img id={`image-${index + 1}`} src={`/projects/${image}.webp`} alt={`${index + 1} ${project.title}`} style={{ transform: "scale(0)", opacity: 0, filter: "saturate(0.1)" }} />
+            <source media="(max-width: 650px)" srcSet={`/projekty/${image}-mobi.webp`}/>
+            <img id={`image-${index + 1}`} src={`/projekty/${image}.webp`} alt={`${index + 1} ${project.title}`} style={{ transform: "scale(0)", opacity: 0, filter: "saturate(0.1)" }} />
           </picture>
         ))}
       </section>
@@ -361,11 +361,11 @@ export function ClientProjectDetails({ project }) {
             controls autoPlay muted playsInline webkit-playsinline="true" preload="auto" 
             width={'80%'} 
             height={'80%'} 
-            poster={isMobile ? `/projects/${project.video}-mobi.jpg` : `/projects/${project.video}.jpg`}
+            poster={isMobile ? `/projekty/${project.video}-mobi.jpg` : `/projekty/${project.video}.jpg`}
             style={{ transform: "translate(-50%, -50%) scale(0)", opacity: 0 }}
           >
-            <source media="(max-width: 650px)" src={`/projects/${project.video}-mobi.mp4`} type="video/mp4" />
-            <source media="(min-width: 651px)" src={`/projects/${project.video}.mp4`} type="video/mp4" />
+            <source media="(max-width: 650px)" src={`/projekty/${project.video}-mobi.mp4`} type="video/mp4" />
+            <source media="(min-width: 651px)" src={`/projekty/${project.video}.mp4`} type="video/mp4" />
             This browser does not support the video tag.
           </video>
         </section>

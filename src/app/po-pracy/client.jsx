@@ -102,33 +102,37 @@ export function ClientAfterWork() {
       });
     });
   }, []);
-
   useLayoutEffect(() => {
-    const myTrigger = document.documentElement;
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        id: "scroll",
-        trigger: myTrigger,
-        start: "+=50px",
-        end: () => "+=" + document.documentElement.scrollHeight + "px",
-        
-        scrub: 1,
-      },
+    const ctx = gsap.context(() => {
+      const myTrigger = document.documentElement;
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          id: "scroll",
+          trigger: myTrigger,
+          start: "+=50px",
+          end: () => "+=" + document.documentElement.scrollHeight + "px",
+          scrub: 1,
+        },
+      });
+  
+      tl.to("#arrowBg", {
+        rotation: () => document.documentElement.scrollHeight,
+      });
+  
+      // Odświeżanie ScrollTrigger na starcie
+      ScrollTrigger.refresh();
     });
-    tl.to('#arrowBg', { rotation: () => document.documentElement.scrollHeight });
-    
-    ScrollTrigger.refresh();
+  
     const updateAnimation = () => {
       ScrollTrigger.refresh();
     };
-
+  
     window.addEventListener("resize", updateAnimation);
-
+  
     return () => {
       window.removeEventListener("resize", updateAnimation);
-      ScrollTrigger.getById("scroll").kill();
+      ctx.revert(); // zamiast ScrollTrigger.getById("scroll").kill()
     };
-
   }, []);
   // SCROLL WHEEL END
 
@@ -137,9 +141,9 @@ export function ClientAfterWork() {
     <Header fillLogo={siteConfig.colors.white} fillMenu={siteConfig.colors.white} langSwitcher={'/after-work'} /> 
       <section className={styles.heroSection}>
         <h1 className={styles.title}>
-          <span className={styles.subTitle}>After work</span> I wander<br />I love climbing
+          <span className={styles.subTitle}>Po pracy</span>Włóczę się,<br />kocham wspinaczkę.
         </h1>
-        <img src="/img/after-work/1-cover.webp" alt="Skrany Granat, Right Rib - Tatra Mountains" width={2560} height={1440} />
+        <Image src="/img/po-pracy/1-cover.webp" alt="Skrany Granat, Prawe Żebro — Tatry" width={2560} height={1440} />
       </section>
       
       <section className={styles.gallery} ref={galleryRef}>
@@ -149,10 +153,10 @@ export function ClientAfterWork() {
               {image.alt}
             </h2>
             <picture>
-              <source media="(max-width: 650px)" srcSet={`/img/after-work/${image.srcMobile}`} />
+              <source media="(max-width: 650px)" srcSet={`/img/po-pracy/${image.srcMobile}`} />
               <img
                 id={`image-${index}`}
-                src={`/img/after-work/${image.src}`}
+                src={`/img/po-pracy/${image.src}`}
                 alt={image.alt}
                 width={image.width}
                 height={image.height}
@@ -162,7 +166,7 @@ export function ClientAfterWork() {
           </React.Fragment>
         ))}
       </section>
-      <BottomHooks HooksHeading="At the peak there is a bedroom without walls" HooksSpan="Under the stars" />
+      <BottomHooks HooksHeading="Na szczycie jest sypialnia bez ścian" HooksSpan="Pod gwiazdami" />
 
       {/* SCROLL LINK */}
       <div id="scroll" ref={scrollScope}>

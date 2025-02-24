@@ -9,7 +9,7 @@ export function BottomHooks({ HooksHeading, HooksSpan }) {
   const [showProjectsLink, setShowProjectsLink] = useState(false);
 
   useEffect(() => {
-    setShowProjectsLink(pathname.includes("/projects"));
+    setShowProjectsLink(pathname.includes("/projekty"));
   }, [pathname]);
 
   return (
@@ -19,8 +19,8 @@ export function BottomHooks({ HooksHeading, HooksSpan }) {
           <h3>{HooksHeading}</h3>
           <h4>{HooksSpan}</h4>
           {showProjectsLink && (
-            <Link href="/projects" className="showProjects more">
-              Projects
+            <Link href="/projekty" className="showProjects more">
+              Projekty
             </Link>
           )}
         </div>

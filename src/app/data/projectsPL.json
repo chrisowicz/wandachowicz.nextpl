@@ -1,0 +1,179 @@
+[
+  {
+    "id": 1,
+    "title": "Victima",
+    "slug": "victima",
+    "content": "Victima to jest Stowarzyszenie Przedsiębiorców Poszkodowanych przez Ubezpieczycieli. Głównym celem Stowarzyszenia jest bezpłatna pomoc przedsiębiorcom w dochodzeniu odszkodowania.\nWykonałem idendyfikację wizualną, w skład której wszedł projekt logotypu marki, projekt strony internetowej, który został zakodowany jako minimalistyczny szablon pod WordPressa.",
+    "logo": "/projekty/victima/logoVictima.svg",
+    "gallery": [
+      "victima/1",
+      "victima/2",
+      "victima/3"
+    ],
+    "link": "victima.pl",
+    "bottomHooksHeading": "To było dawno temu. Tworzę ponadczasowe rzeczy...",
+    "bottomHooksSpan": "Moje pierwsze chwile w WordPressie ;)"
+  },
+  {
+    "id": 2,
+    "title": "Liconfe",
+    "slug": "liconfe",
+    "content": "Liconfe to największy producent przemysłowych nici szwalniczych na Półwyspie Iberyjskim.\nDla głównego dystrybutora na Wschodnią Europę wykonałem projekt strony internetowej, który został zakodowany jako minimalistyczny szablon pod WordPressa. Zaprojektowałem również wizytówki, katalog ofertowy, kalendarz trójdzielny i inne drobiazgi.",
+    "logo": "/projekty/liconfe/logoLiconfe.svg",
+    "gallery": [
+      "liconfe/1",
+      "liconfe/2",
+      "liconfe/3"
+    ],
+    "link": "liconfe.pl",
+    "bottomHooksHeading": "Sporo nauczyłem się o niciach.",
+    "bottomHooksSpan": "Ale stronę uszyłem w kodzie ;)"
+  },
+  {
+    "id": 3,
+    "title": "Qi-Med",
+    "slug": "qimed",
+    "content": "Qi-med praktykuje wczesną medycynę chińską, daoizm, szamanizm i naturalizm, pomagając odnaleźć prawdziwą naturę i akceptować wszystkie życiowe doświadczenia jako niezbędne do realizacji unikalnego planu jakim jest życie.\nWykonałem wektoryzację logotypu, projekt strony internetowej, który zakodowałem jako minimalistyczny szablon pod WordPressa.",
+    "logo": "/projekty/qi-med/logoQiMed.svg",
+    "gallery": [
+      "qi-med/1",
+      "qi-med/2",
+      "qi-med/3"
+    ],
+    "link": "qi-med.com",
+    "bottomHooksHeading": "Świadome odżywianie to lepsze życie.",
+    "bottomHooksSpan": "Ale proces nauki i eksperymentów jest pyszny ;) "
+  },
+  {
+    "id": 4,
+    "title": "AudioClinic",
+    "slug": "audioclinic",
+    "content": "Słuch jest jednym z najistotniejszych zmysłów w naszym ciele. Dowodem na to jest fakt, że jako jedyny zmysł pozostaje aktywny przez cały okres naszego życia, nawet kiedy śpimy. Pani Kasia pomaga dzieciom i dorosłym po prostu usłyszeć. Dziękuję za to.\nWykonałem projekt strony internetowej, który koduję w React, finalna wersja strony będzie zoptymalizowana i szybka, oparta o najnowsze technologie webowe.",
+    "logo": "/projekty/audioclinic/logoAudioclinic.svg",
+    "gallery": [
+      "audioclinic/1",
+      "audioclinic/2",
+      "audioclinic/3"
+    ],
+    "link": "",
+    "bottomHooksHeading": "Dla mnie słuch stał się jeszcze ważniejszy dlatego, że",
+    "bottomHooksSpan": "słyszę muzykę."
+  },
+  {
+    "id": 5,
+    "title": "DobryKominek",
+    "slug": "dobrykominek",
+    "content": "Dobry Kominek to marka, miejsce i ludzie, gdzie znajdziesz ciepło i komfort. Ale również fachową pomoc i mnóstwo sprzętu do ogrzania domowego ogniska. \nWykonałem projekt logotypu, projekt sklepu internetowego, który zakodowałem jako minimalistyczny szablon pod PrestaShop.",
+    "logo": "/projekty/dobrykominek/logoDobrykominek.svg",
+    "gallery": [
+      "dobrykominek/1",
+      "dobrykominek/2",
+      "dobrykominek/3"
+    ],
+    "link": "dobrykominek.com",
+    "bottomHooksHeading": "Sprzedają sprzęt do dawania ciepła...",
+    "bottomHooksSpan": "Ale najwięcej mają go w swoich sercach :-)"
+  },
+  {
+    "id": 6,
+    "listTitle": "Rodos",
+    "title": "Rodos Dream Tours",
+    "slug": "rodosdreamtours",
+    "content": "Rodos to Pani Martyna - energiczna, ciepła i pełna pasji obywatelka świata. Dream - bo to jej marzenie, a tour - to niezwykłe wycieczki po Rodos z lokalnym polskim biurem turystycznym.\nWykonałem projekt logotypu, projekt strony internetowej z systemem rezerwacji, który zakodowałem jako minimalistyczny szablon pod WordPress.",
+    "logo": "/projekty/rodosdreamtours/logoRodosDreamTours.svg",
+    "gallery": [
+      "rodosdreamtours/1",
+      "rodosdreamtours/2",
+      "rodosdreamtours/3"
+    ],
+    "link": "rodosdreamtours.pl",
+    "bottomHooksHeading": "Ten projekt jest wyjątkową wycieczką.",
+    "bottomHooksSpan": "Bo droga jest równie ważna jak cel."
+  },
+  {
+    "id": 7,
+    "title": "Przytulaśna",
+    "slug": "przytulasna",
+    "content": "Wyjątkowa szkoła tańca, gdzie pasja spotyka przyjaciół, a nauka miesza się z radością ruchu, wyrażaniem siebie, bliskością i muzyką.\nWykonałem projekt logotypu, projekt strony internetowej, który zakodowałem jako minimalistyczny szablon pod WordPress.",
+    "logo": "/projekty/przytulasna/logoPrzytulasna.svg",
+    "gallery": [
+      "przytulasna/1",
+      "przytulasna/2",
+      "przytulasna/3"
+    ],
+    "link": "przytulasna.pl",
+    "bottomHooksHeading": "Taniec",
+    "bottomHooksSpan": "to droga w tym samym kierunku"
+  },
+  {
+    "id": 8,
+    "listTitle": "Malewska",
+    "title": "Adrianna Malewska",
+    "slug": "malewska",
+    "content": "Wizerunek to pierwszy przystanek do poznania kogoś, ponieważ zazwyczaj najpierw widzimy, a później słyszymy. Pani Adrianna to stylistka pełna pasji i pomysłów ze świata mody.\nWykonałem projekt logotypu, projekt strony internetowej, który zakodowałem w React, finalna wersja strony zajmuje niecałe pięć mega. Stworzyłem również wizytówkę oraz kartę podarunkową.",
+    "logo": "/projekty/malewska/logoMalewska.svg",
+    "gallery": [
+      "malewska/1",
+      "malewska/2",
+      "malewska/3"
+    ],
+    "link": "malewska.com",
+    "bottomHooksHeading": "Dobra strona internetowa\njest jak ubranie.",
+    "bottomHooksSpan": "Szyte na miarę."
+  },
+  {
+    "id": 9,
+    "title": "Marzec",
+    "slug": "marzec",
+    "content": "Zdradzę Ci sekret: kiedyś umrzesz. Byłoby dobrze uporządkować swoje sprawy i zadbać o sukcesję, zarówno Twoją, jak i Twojej firmy. Przedstawiam Ci Mariusza - specjalistę z 30-letnim doświadczeniem w finansach - pomoże Ci w planowaniu dziedziczenia i zabezpieczeniu majątku na przyszłość. Mariusz Marzec to człowiek, który wie wszystko o mechanizmach finansowych i ubezpieczeniach. Chcesz dowiedzieć się więcej? Wpadnij na stronę...\nWykonałem projekt logotypu i projekt strony internetowej, który zakodowałem jako minimalistyczny szablon pod WordPress.",
+    "logo": "/projekty/marzec/logoMarzec.svg",
+    "gallery": [
+      "marzec/1",
+      "marzec/2",
+      "marzec/3"
+    ],
+    "link": "mariuszmarzec.pl",
+    "bottomHooksHeading": "Nie przedstawiam oferty,",
+    "bottomHooksSpan": "przedstawiam człowieka."
+  },
+  {
+    "id": 10,
+    "listTitle": "Sosna",
+    "title": "Katarzyna Sosna",
+    "slug": "sosna",
+    "content": "Przedstawiam Katarzynę Sosnę — doświadczoną masażystkę i szkoleniowca z 14-letnim stażem, która z pasją uczy m.in. masażu Lomi Lomi Nui oraz wspiera rozwój technik i czucia. Stronę wykonałem w Next.js (produkcyjna wersja: SSR) z lekkim systemem zarządzania treścią (Cockpit CMS), zapewniając szybkie ładowanie i wygodną edycję. Zastosowałem lekki system rezerwacji bez przetwarzania danych osobowych oraz zoptymalizowałem stronę pod kątem wydajności – wersja produkcyjna waży zaledwie 7.9 MB. Dane cache'owane są w przeglądarce, a Cloudflare dba o ich błyskawiczne dostarczanie. Wszystkie obrazy zapisane są w formacie WebP, a ikony włącznie z logo osadzone są jako funkcje React. Strona wzbogacona jest o płynne animacje HTML zarządzane poprzez przewijanie strony. Pominąłem proces projektowy – kodując, od razu tworzyłem finalny wygląd.",
+    "logo": "/projekty/sosna/logoKatarzynaSosna.svg",
+    "gallery": [
+      "sosna/1",
+      "sosna/2",
+      "sosna/3",
+      "sosna/4",
+      "sosna/5",
+      "sosna/6"
+    ],
+    "video": "sosna/video/sosna",
+    "link": "katarzynasosna.pl",
+    "bottomHooksHeading": "Dotyk to ważny zmysł, bo daje bliskość,",
+    "bottomHooksSpan": "a odpowiednio wytrenowany potrafi leczyć."
+  },
+  {
+    "id": 11,
+    "listTitle": "Spontan",
+    "title": "Spontan Latino na Paprach",
+    "slug": "spontan",
+    "content": "Stworzyłem stronę internetową dla społecznej inicjatywy Spontan Latino na Paprach, która łączy miłość do tańca i muzyki latino z niepowtarzalną atmosferą spotkań nad malowniczym Jeziorem Paprocany w Tychach. Strona została zbudowana w Next.js, wykorzystując server-side rendering (SSR), co zapewnia dynamiczne ładowanie treści i doskonałą wydajność. Projekt uzyskał najwyższe oceny w PageSpeed Insights (90–100 na telefonach i 100 na komputery), dzięki czemu działa płynnie i spełnia najwyższe standardy dostępności oraz SEO. Strona główna aplikacji jest animowana poprzez scroll, a bez pamięci podręcznej waży zaledwie 904.8 kB, wszystkie obrazy są w formacie WebP, zoptymalizowany cache przeglądarki oraz CloudFlare gwarantują szybkie ładowanie. Ikony i logo są osadzone jako funkcje React, a style są zaimplementowane w Dart Sass. Dodatkowo stworzyłem logotyp i materiały graficzne wspierające wydarzenia charytatywne, m.in. Taneczny Finał WOŚP, który współorganizuję od 2023 r. Cały projekt powstał bez klasycznego procesu projektowego – tworzyłem wygląd strony bezpośrednio w kodzie.",
+    "logo": "/projekty/spontanlatinonapaprach/logoSpontanLatino.svg",
+    "gallery": [
+      "spontanlatinonapaprach/1",
+      "spontanlatinonapaprach/2",
+      "spontanlatinonapaprach/3",
+      "spontanlatinonapaprach/4",
+      "spontanlatinonapaprach/5",
+      "spontanlatinonapaprach/6",
+      "spontanlatinonapaprach/7"
+    ],
+    "link": "spontanlatinonapaprach.pl",
+    "bottomHooksHeading": "Taniec to rozmowa ciał.",
+    "bottomHooksSpan": "Bez słów."
+  }
+]

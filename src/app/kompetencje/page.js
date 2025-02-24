@@ -3,6 +3,6 @@ import { ClientCompetencies } from "./client";
 
 export { generateMetadata };
 
-export default function MeetMe() {
+export default function Competencies() {
   return <ClientCompetencies />;
 }

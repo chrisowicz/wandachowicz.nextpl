@@ -15,7 +15,7 @@ export function Footer() {
       <div id="bottom">
         {/* Wyświetl datę tylko po stronie klienta */}
         <p>{currentYear ? `${currentYear} — wandachowicz.pl` : "wandachowicz.pl"}</p>
-        <Link href={"/privacy-policy"}>Polityka prywatności i cookies</Link>
+        <Link href={"/polityka-prywatnosci"}>Polityka prywatności i cookies</Link>
       </div>
     </footer>
   );

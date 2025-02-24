@@ -3,6 +3,6 @@ import { ClientAfterWork } from "./client";
 
 export { generateMetadata };
 
-export default function MeetMe() {
+export default function AfterWork() {
   return <ClientAfterWork />;
 }

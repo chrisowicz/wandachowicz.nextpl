@@ -3,6 +3,6 @@ import { ClientContact } from "./client";
 
 export { generateMetadata };
 
-export default function MeetMe() {
+export default function Contact() {
   return <ClientContact />;
 }

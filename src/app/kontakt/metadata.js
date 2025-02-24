@@ -1,12 +1,12 @@
 import { siteConfig } from "../_config/siteConfig";
 
 export const generateMetadata = () => ({
-  title: "Contact — Krzysiek Wandachowicz",
-  description: "Have a question? Write to me",
+  title: "Kontakt — Krzysiek Wandachowicz",
+  description: "Poznajmy się i stwórzmy razem niezwykłą historię — wandachowicz.com",
   openGraph: {
-    title: "Contact — Krzysiek Wandachowicz",
-    description: "Have a question? Write to me",
-    url: `${siteConfig.domain}/contact`,
+    title: "Kontakt — Krzysiek Wandachowicz",
+    description: "Poznajmy się i stwórzmy razem niezwykłą historię — wandachowicz.com",
+    url: `${siteConfig.domain}/kontakt`,
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/contact.webp`,

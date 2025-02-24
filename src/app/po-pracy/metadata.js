@@ -1,12 +1,12 @@
 import { siteConfig } from "../_config/siteConfig";
 
 export const generateMetadata = () => ({
-  title: "After work — Krzysiek Wandachowicz",
-  description: "I love climbing and I visit exceptional places. Discover my passions — wandachowicz.com",
+  title: "Po pracy — Krzysiek Wandachowicz",
+  description: "Bywam w wyjątkowych miejscach, kocham wspinaczkę skalną i wysokogórską oraz biwakowanie pod gwiazdami. Pozanj moje pasje — wandachowicz.com",
   openGraph: {
-    title: "After work — Krzysiek Wandachowicz",
-    description: "I love climbing and I visit exceptional places. Discover my passions — wandachowicz.com",
-    url: `${siteConfig.domain}/after-work`,
+    title: "Po pracy — Krzysiek Wandachowicz",
+    description: "Bywam w wyjątkowych miejscach, kocham wspinaczkę skalną i wysokogórską oraz biwakowanie pod gwiazdami. Pozanj moje pasje — wandachowicz.com",
+    url: `${siteConfig.domain}/po-pracy`,
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/afterWork.webp`,

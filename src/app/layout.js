@@ -11,23 +11,26 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL(siteConfig.domain),
-  title: 'UI/UX design, web developer, react developer, programmer - Krzysiek Wandachowicz',
-  description: 'Check out my portfolio and experience in design and programming.',
+  title: 'UI/UX design, web developer, react developer, programista - Krzysiek Wandachowicz',
+  description: 'Zobacz moje portfolio i doświadczenie w programowaniu i projektowaniu — tworzę niezwykłe rzeczy dla wyjątkowych ludzi.',
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',
     locale: siteConfig.lang,
     url: siteConfig.domain,
-    title: 'UI/UX design, web developer, react developer, programmer - Krzysiek Wandachowicz',
-    description: 'Check out my portfolio and experience in design and programming.',
+    title: 'UI/UX design, web developer, react developer, programista - Krzysiek Wandachowicz',
+    description: 'Zobacz moje portfolio i doświadczenie w programowaniu i projektowaniu — tworzę niezwykłe rzeczy dla wyjątkowych ludzi.',
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/wandachowicz.webp`,
         width: 1600,
         height: 900,
-        alt: 'UI/UX design, web developer, react developer, programmer - Krzysiek Wandachowicz',
+        alt: 'UI/UX design, web developer, react developer, programista - Krzysiek Wandachowicz',
       },
     ],
   },

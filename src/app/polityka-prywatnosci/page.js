@@ -3,6 +3,6 @@ import { ClientPrivacyPolicy } from "./client";
 
 export { generateMetadata };
 
-export default function MeetMe() {
+export default function PrivacyPolicy() {
   return <ClientPrivacyPolicy />;
 }

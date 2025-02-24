@@ -23,7 +23,7 @@ export function ClientContact() {
 
       tl.to("h1", {
         opacity: 1,
-        scale: 1.8,
+        scale: 1,
         duration: 3,
         ease: "power3.out",
       })
@@ -35,7 +35,7 @@ export function ClientContact() {
       }, "-=0.1")
       .to("h2", {
         opacity: 1,
-        scale: 1.8,
+        scale: 1,
         duration: 2,
         ease: "power3.out",
       }, "-=0.1")
@@ -48,7 +48,7 @@ export function ClientContact() {
       }, "-=0.1")
       .to("a", {
         opacity: 1,
-        scale: 0.8,
+        scale: 1,
         duration: 3,
         ease: "power3.out",
       }, "-=0.1");
@@ -60,13 +60,13 @@ export function ClientContact() {
 
   return (
     <>
-      <Header /> 
+      <Header langSwitcher={'/contact'}/> 
       <section className={styles.heroContact} ref={heroSectionRef}>
-        <h1 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Have a question?</h1>
-        <h2 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Let's talk.</h2>
-        <a style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}} target="_blank" rel="noreferrer" href="mailto:hello@wandachowicz.com">hello@wandachowicz.com</a>
+        <h1 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Masz pytanie?</h1>
+        <h2 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Porozmawiajmy.</h2>
+        <a style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}} target="_blank" rel="noreferrer" href="mailto:witaj@wandachowicz.pl">witaj@wandachowicz.pl</a>
       </section>
-      <BottomHooks HooksHeading="Let's get to know each other" HooksSpan="And let's create an amazing story together" />
+      <BottomHooks HooksHeading="Poznajmy się" HooksSpan="I stwórzmy razem niezwykłą historię" />
     </>
   );
 }

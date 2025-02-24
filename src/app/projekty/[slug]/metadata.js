@@ -10,18 +10,18 @@ export async function generateMetadata({ params }) {
 
   if (!project) {
     return {
-      title: "Project not found",
-      description: "The requested project could not be found.",
+      title: "Projekt nie znaleziony",
+      description: "Projekt nie został znaleziony.",
     };
   }
 
   // Ograniczanie opisu do 150 znaków dla SEO
-  const description = project.content.length > 150 ? project.content.substring(0, 150) + "... Meet!" : project.content;
+  const description = project.content.length > 150 ? project.content.substring(0, 150) + "... Poznaj!" : project.content;
 
   // Generowanie pełnego URL do obrazu og:image
   const imageUrl = project.gallery?.length > 0
-    ? `${siteConfig.domain}/projects/${project.gallery[0]}.webp`
-    : `${siteConfig.domain}/img/default-og-image.webp`; // Fallback dla pustej galerii
+    ? `${siteConfig.domain}/projekty/${project.gallery[0]}.webp`
+    : `${siteConfig.domain}/img/ogImage/wandachowicz.webp`; // Fallback dla pustej galerii
 
   return {
     title: project.title,
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: project.title,
       description: description,
+      url: `${siteConfig.domain}/projekty/${project.slug}`,
       images: [
         {
           url: imageUrl,

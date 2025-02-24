@@ -61,11 +61,11 @@ export default function NotFound() {
     <>
       <Header />
       <section id="heroNotFound" ref={heroSectionRef}>
-        <h1 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Page not found ;(</h1>
-        <h2 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>But all is not lost!</h2>
-        <Link style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}} href='/'>Start from the beginning ;)</Link>
+        <h1 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Nie mam takiej strony ;(</h1>
+        <h2 style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>Ale nic takiego się nie stało!</h2>
+        <Link style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}} href='/'>Zacznij od początku ;)</Link>
       </section>
-      <BottomHooks HooksHeading="You're off the trail ;0" HooksSpan="This is a good place to camp!"/>
+      <BottomHooks HooksHeading="Jesteś poza szlakiem ;0" HooksSpan="To dobre miejsce na biwak!"/>
     </>
   )
 }

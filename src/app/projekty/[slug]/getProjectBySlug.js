@@ -1,4 +1,4 @@
-import projects from '../../data/projectsEN.json';
+import projects from '../../data/projectsPL.json';
 
 export function getProjectBySlug(slug) {
   return projects.find(project => project.slug === slug);

@@ -64,7 +64,7 @@ export function ClientCompetencies() {
     const ctx = gsap.context(() => {
       gsap.to(heroSectionTitleRef.current, {
         duration: 2,
-        text: "Competencies",
+        text: "Kompetencje",
         delay: 1,
       });
     }, heroSectionRef);
@@ -123,7 +123,6 @@ export function ClientCompetencies() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const myTrigger = document.documentElement;
-  
       const tl = gsap.timeline({
         scrollTrigger: {
           id: "scroll",
@@ -136,12 +135,11 @@ export function ClientCompetencies() {
   
       tl.to(competencesScrollIcon.current, {
         rotation: () => document.documentElement.scrollHeight,
-        ease: "none",
       });
   
+      // Odświeżanie ScrollTrigger na starcie
+      ScrollTrigger.refresh();
     });
-  
-    ScrollTrigger.refresh();
   
     const updateAnimation = () => {
       ScrollTrigger.refresh();
@@ -151,16 +149,16 @@ export function ClientCompetencies() {
   
     return () => {
       window.removeEventListener("resize", updateAnimation);
-      ScrollTrigger.getById("scroll")?.kill();
-      ctx.revert();
+      ctx.revert(); // zamiast ScrollTrigger.getById("scroll").kill()
     };
   }, []);
+  
   // // SCROLL WHEEL END
   
 
   return (
     <>
-      <Header />
+      <Header langSwitcher={'/competencies'}/>
       <Image src={"/img/competenciesSectionBg.svg"} alt={"Scroll"} className={styles.competencesScrollIcon} ref={competencesScrollIcon} width={120} height={93} />
       <section className={styles.heroSection} ref={heroSectionRef}>
         <h1>
@@ -174,10 +172,10 @@ export function ClientCompetencies() {
         <div className={styles.coding} ref={codingRef} style={{ transform: "scale(0)", opacity: 0 }}>
           <div className={styles.competenciesDesc} ref={codingDescRef} style={{ transform: "scale(5) translate(0, 0)", opacity: 0 }}>
             <h2>Front-end developer</h2>
-            <p>I am a front-end developer with solid experience in designing and coding modern, responsive websites. Since 2015 I have been writing dedicated templates for various CMS systems, combining knowledge of HTML, CSS, JavaScript, and basic PHP. Since 2020 I have been creating minimalist templates for WordPress, independently designing UI and then coding interfaces, ensuring full control over each stage of the project. I focus on optimizing user experience (UX), code performance (Lighthouse) and maintaining the highest quality. Since 2024 I have focused on the practical use of JavaScript and its numerous libraries such as React.js, Gsap.js and tools like Gulp.js. In search of optimization and speed of website performance, I have become interested in Headless CMS. Monolithic systems are heavy and separating the frontend from the backend provides amazing opportunities for data presentation (Rest API) in the form of micro-applications and their optimization.</p>
+            <p>Jestem frontend developerem z solidnym doświadczeniem w projektowaniu i kodowaniu nowoczesnych, responsywnych stron internetowych.<br />Od 2015 roku piszę dedykowane szablony pod różne systemy CMS, łączę wiedzę z zakresu HTML, CSS, JavaScript oraz podstaw PHP.<br />Od 2020 roku piszę minimalistyczne szablony pod WordPress, samodzielnie projektuję UI i następnie koduję interfejsy, zapewniając pełną kontrolę nad każdym etapem realizacji projektu. Skupiam się na optymalizacji doświadczeń użytkownika (UX), wydajności kodu (Light House) oraz zachowaniu najwyższej jakości wykonania.<br />Od 2024 roku skupiłem się na praktycznym stosowaniu Java Script oraz jego licznych bibliotek takich jak React.js, Gsap.js oraz narzędzi takich jak Gulp.js. W poszukiwaniu optymalizacji i szybkości działania stron internetowych zainteresowałem się Headless CMS. Monolityczne systemy są ciężkie, a odzielenie frontendu od backendu daje niesamowite możliwości prezentacji danych (Rest API) w postaci mikroaplikacji oraz ich optymalizacji.</p>
           </div>
           <div className={styles.skills} ref={languagesRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>Programming languages</h3>
+            <h3>Języki programowania</h3>
             <ul>
             {skills.coding.languages.map((language, index) => (
               <li className={`level-${language.level}`} key={index}>
@@ -187,7 +185,7 @@ export function ClientCompetencies() {
             </ul>
           </div>
           <div className={styles.skills} ref={frameworksRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>Frameworks and Libraries</h3>
+            <h3>Frameworki i biblioteki</h3>
             <ul>
             {skills.coding.frameworks_and_libraries.map((fal, index) => (
               <li className={`level-${fal.level}`} key={index}>
@@ -197,7 +195,7 @@ export function ClientCompetencies() {
             </ul>
           </div>
           <div className={styles.skills} ref={toolsRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>Tools and Technologies</h3>
+            <h3>Narzędzia i technologie</h3>
             <ul>
             {skills.coding.tools_and_technologies.map((tools, index) => (
               <li className={`level-${tools.level}`} key={index}>
@@ -207,7 +205,7 @@ export function ClientCompetencies() {
             </ul>
           </div>
           <div className={styles.skills} ref={cmsRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>CMS Systems</h3>
+            <h3>Systemy CMS</h3>
             <ul>
             {skills.coding.cms.map((cms, index) => (
               <li className={`level-${cms.level}`} key={index}>
@@ -221,10 +219,10 @@ export function ClientCompetencies() {
         <div className={styles.webDesign} ref={webDesignRef} style={{ transform: "scale(0)", opacity: 0 }}>
           <div className={styles.competenciesDesc} ref={webDesignDescRef} style={{ transform: "scale(5)", opacity: 0 }}>
             <h2>Web designer</h2>
-            <p>I designed my first interface back in 2008. It was clunky ;). I began gaining practical experience between 2010 and 2015, working with my first creative agency and on my own projects for various clients. Since 2015 I have been designing consciously, continuously expanding my knowledge in UI/UX, web design, logo design and many other areas related to design and coding. Since 2020 I have been designing and coding dedicated templates for WordPress, which include logo designs, websites or online stores, coding and complete implementation. I have created many company websites, online stores, blogs, information portals, classified ad portals, reservation systems and registration systems. Since 2024 I have focused on typography, minimalism and important UX principles. I design with the idea that less is more. Whenever possible in a given project, I strive to apply my established practices while constantly expanding my knowledge. In my opinion, a good website is not just about popular standards like material design but, above all, a story—a good story about you or your product. I design in all the leading graphic programs. I use tools from the Affinity and Adobe suite. For a long time, I have been designing UI/UX projects in Figma with support from Affinity Designer for more complex components.</p>
+            <p>Pierwszy interfejs zaprojektowałem już w 2008 roku. Był toporny ;). Praktyki zacząłem nabywać w latach  2010 — 2015 przy współpracy z pierwszą agencją kreatywną oraz we własnych projektach dla wielu klientów.<br />Od 2015 roku projektuję świadomie, ciągle powiększając swoją wiedzę z zakresu UI/UX, web designu, logo designu i w wielu innych obszarach związanych z projektowaniem i kodowaniem.<br />Od 2020 roku projektuję i koduję dedykowane szablony pod WordPressa, w skład których wchodzą m.in. projekty logotypu, strony lub sklepu internetowego, kodowanie i kompleksowe wdrożenie. Wykonałem wiele stron firmowych, sklepów internetowych, blogów, portali informacyjnych, ogłoszeniowych, systemów rezerwacji i rejestracji.<br />Od 2024 roku skupiłem się na typografii, minimaliźmie oraz ważnym UX. Projektuję zgodnie z zasadą, że czym mniej, tym więcej. O ile to jest możliwe w konkretnym projekcie, staram się wdrażać swoje wypracowane praktyki oraz stale poszerzam swoją wiedzę. Moim zdaniem dobra strona internetowa to nie tylko oklepane standardy jak material design, ale przede wszystkim opowieść. Dobra opowieść o Tobie lub Twoim produkcie.<br />Projektuję we wszystkich liczących się programach graficznych. Użytkuję programy ze stajni Affinity, Adobe. Od dłuższego czasu projekty UI/UX rysuję w Figmie ze wsparciem Affinity Designer dla potrzeb bardziej skomplikowanych komponentów.</p>
           </div>
           <div className={styles.skills} ref={webDesignSkillsRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>Programs</h3>
+            <h3>Programy</h3>
             <ul>
             {skills.design.map((skill, index) => (
               <li className={`level-${skill.level}`} key={index}>
@@ -237,11 +235,11 @@ export function ClientCompetencies() {
         
         <div className={styles.workFlow} ref={workFlowRef} style={{ transform: "scale(0)", opacity: 0 }}>
           <div className={styles.competenciesDesc} ref={workFlowDescRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h2>Busy Bee: How I Work</h2>
-            <p>At the project level, I function well in efficient communication: I use Trello and have also worked with Slack and many other applications. No interface or workflow system scares me. In my projects, I apply Scrum methodologies. Even when working as a freelancer, I believe that using an organized and proven workflow accelerates task execution. Thanks to thoughtful project stages (Sprint) and efficient communication with the client (Daily Scrum, Sprint Review), we can focus on our tasks and everyone knows what to do. I can manage projects, distribute tasks and monitor their progress. I am fluent in terminal usage (CLI), I use version control systems (GitHub) and I prefer to connect to servers via SSH, which allows me to install necessary software and perform production deployments.</p>
+            <h2>Pszczółka Robotnica, czyli jak pracuję</h2>
+            <p>Na poziomie projektowym funkcjonuję w sprawnej komunikacji: korzystam z Trello, pracowałem również na Slacku, jak i w wielu innych aplikacjach. Żaden interfejs i system postępowania nie jest mi straszny.<br />W swoich projektach stosuję metodyki Scruma. Działając nawet jako freelancer uważam, że korzystanie z uporządkowanego i sprawdzonego systemu postępowania przyśpiesza wykonanie zadań. Dzięki przemyślanym etapom projektu (Sprint) i sprawnej komunikacji z klientem (Daily Scrum, Sprint Review) jesteśmy w stanie wykonać nasze zadania w skupieniu, a każdy wie, co ma robić.<br />Potrafię zarządzać projektem, rozdzielać zadania i pilnować stanu realizacji. Płynnie poruszam się w terminalu (CLI), korzystam z systemu kontroli wersji (github), a z serwerem preferuję łączyć się przez SSH, co pozwala mi na instalacje potrzebnego oprogramowania i produkcyjne publikacje.</p>
           </div>
           <div className={styles.skills} ref={workFlowSkillsRef} style={{ transform: "scale(5)", opacity: 0 }}>
-            <h3>Project Communication</h3>
+            <h3>Komunikacja projektowa</h3>
             <ul>
             {skills.flow.map((skill, index) => (
               <li className={`level-${skill.level}`} key={index}>
@@ -252,7 +250,7 @@ export function ClientCompetencies() {
           </div>
         </div>
       </section>
-      <BottomHooks HooksHeading="Technology changes the world," HooksSpan="and creativity changes technology." />
+      <BottomHooks HooksHeading="Technologie zmieniają świat," HooksSpan="a kreatywność zmienia technologie." />
     </>
   );
 }

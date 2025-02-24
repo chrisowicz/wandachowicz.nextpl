@@ -1,12 +1,12 @@
 import { siteConfig } from "../_config/siteConfig";
 
 export const generateMetadata = () => ({
-  title: "Projects — my works",
-  description: "Meet my realizations - projects of high speed and modern websites, web applications, and graphic designs.",
+  title: "Projekty — moja praca",
+  description: "Zobacz moje realizacje stron na Next.js, WordPress, optymalizacje i szybkość działania — na wandachowicz.com.",
   openGraph: {
-    title: "Projects — my works",
-    description: "Meet my realizations - projects of high speed and modern websites, web applications, and graphic designs.",
-    url: `${siteConfig.domain}/projects`,
+    title: "Projekty — moja praca",
+    description: "Zobacz moje realizacje stron na Next.js, WordPress, optymalizacje i szybkość działania — na wandachowicz.com.",
+    url: `${siteConfig.domain}/projekty`,
     images: [
       {
         url: `${siteConfig.domain}/img/ogImage/projects.webp`,

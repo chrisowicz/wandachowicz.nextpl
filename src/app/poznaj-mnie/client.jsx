@@ -362,88 +362,94 @@ export function ClientMeetMe() {
     });
   }, []);
   useLayoutEffect(() => {
-    const myTrigger = document.documentElement;
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        id: "scroll",
-        trigger: myTrigger,
-        start: "+=50px",
-        end: () => "+=" + document.documentElement.scrollHeight + "px",
-        
-        scrub: 1,
-      },
+    const ctx = gsap.context(() => {
+      const myTrigger = document.documentElement;
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          id: "scroll",
+          trigger: myTrigger,
+          start: "+=50px",
+          end: () => "+=" + document.documentElement.scrollHeight + "px",
+          scrub: 1,
+        },
+      });
+  
+      tl.to("#arrowBg", {
+        rotation: () => document.documentElement.scrollHeight,
+      });
+  
+      // Odświeżanie ScrollTrigger na starcie
+      ScrollTrigger.refresh();
     });
-    tl.to('#arrowBg', { rotation: () => document.documentElement.scrollHeight });
-    
-    ScrollTrigger.refresh();
+  
     const updateAnimation = () => {
       ScrollTrigger.refresh();
     };
-
+  
     window.addEventListener("resize", updateAnimation);
-
+  
     return () => {
       window.removeEventListener("resize", updateAnimation);
-      ScrollTrigger.getById("scroll").kill();
+      ctx.revert(); // zamiast ScrollTrigger.getById("scroll").kill()
     };
-
   }, []);
+  
   // SCROLL WHEEL END
   
 
   return (
     <>
-      <Header />
+      <Header langSwitcher={'/meet-me'}/>
       <section className={styles.slideOne} ref={slideOneRef}>
         <h1>
-          <span className={styles.first} style={{ transform: "scale(0)", opacity: 0 }} ref={slideOneFirstRef}>Since some time</span> 
-          <span className={styles.second} style={{ transform: "scale(0)", opacity: 0 }} ref={slideOneSecondRef}>I do four things in my life</span>
+          <span className={styles.first} style={{ transform: "scale(0)", opacity: 0 }} ref={slideOneFirstRef}>Od jakiegoś czasu</span> 
+          <span className={styles.second} style={{ transform: "scale(0)", opacity: 0 }} ref={slideOneSecondRef}>w życiu robię cztery rzeczy</span>
         </h1>
       </section>
 
       <section className={styles.slideTwo} ref={slideTwoRef}>
         <h2 ref={slideTwoFirstTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>
-          I love
+          Zakochałem się
         </h2>
         <picture>
           <source media="(max-width: 650px)" srcSet="/img/mobileA&K.webp"/>
           <img 
-            src="/img/desktopA&K.webp" alt="I love" ref={slideTwoFirstTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}
+            src="/img/desktopA&K.webp" alt="Zakochałem się" ref={slideTwoFirstTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}
           />
         </picture>
         <h2 ref={slideTwoSecondTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>
-          I work
+          Pracuję
         </h2>
         <picture>
           <source media="(max-width: 650px)" srcSet="/img/workMobi.webp"/>
           <img 
-            src="/img/work.webp" alt="Get to know my websites projects" ref={slideTwoSecondTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}
+            src="/img/work.webp" alt="Tworzę niezwykłe strony internetowe" ref={slideTwoSecondTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}
           />
         </picture>
         <h2 ref={slideTwoThreeTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>
-          I dance
+          Tańczę latino
         </h2>
         <picture>
           <source media="(max-width: 650px)" srcSet="/img/dance-mobi.webp"/>
-          <img src="/img/dance.webp" alt="I dance" ref={slideTwoThreeTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}/>
+          <img src="/img/dance.webp" alt="Tańczę latino, impro, taniec nowoczesny" ref={slideTwoThreeTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}/>
         </picture>
 
         <h2 ref={slideTwoFourTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>
-          I wander
+          Włóczę się
         </h2>
         <picture>
           <source media="(max-width: 650px)" srcSet="/img/lodowy-szczyt-mobi.webp"/>
-          <img src="/img/lodowy-szczyt.webp" alt="I wander" ref={slideTwoFourTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}/>
+          <img src="/img/lodowy-szczyt.webp" alt="Uwielbiam wspinaczkę skalną, wysokogórską oraz biwakowanie na szczytach." ref={slideTwoFourTextImageRef} width={2560} height={1440} style={{transform: "scale(0)", opacity: 0, filter: "saturate(0.1)"}}/>
         </picture>
       </section>
       <section className={styles.slideFive} ref={slideFiveRef}>
-        <h2 ref={slideFiveFirstTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>What was before...</h2>
+        <h2 ref={slideFiveFirstTextRef} style={{transform: "translate(-50%, -50%) scale(0)", opacity: 0}}>To, co było<br />wcześniej...</h2>
         <div ref={slideFiveWhiteRef} className={styles.white} style={{transform: "scale(0)", opacity: 0}}>
-          <h2 ref={slideFiveWhiteTextRef} style={{transform: "translate(-50%, -50%) scale(5)", opacity: 0}}>Is no longer important, because important is today and extraordinary tomorrow.</h2>
+          <h2 ref={slideFiveWhiteTextRef} style={{transform: "translate(-50%, -50%) scale(5)", opacity: 0}}>Jest już nieważne,<br />bo ważne jest dzisiaj<br />i niezwykłe jutro.</h2>
         </div>
       </section>
 
-      <BottomHooks HooksHeading="To memory" HooksSpan="When I close my eyes, I have before them the beautiful things I have seen and amazing experiences I felt." />
+      <BottomHooks HooksHeading="Do pamięci" HooksSpan="Jak zamknę oczy, to mam przed nimi piękne rzeczy, które widziałem oraz niesamowite przeżycia, które czułem." />
 
       {/* SCROLL LINK */}
       <div id="scroll" ref={scrollScope}>
