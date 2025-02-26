@@ -1,3 +1,5 @@
+"use client";
+
 import { siteConfig } from "../_config/siteConfig";
 
 export function LanguageSwitcher({ siteUrl = "/" }) {
@@ -7,7 +9,7 @@ export function LanguageSwitcher({ siteUrl = "/" }) {
   };
 
   return (
-    <button onClick={handleSwitch} id="langSwitcher">
+    <button onClick={handleSwitch} className={styles.langSwitcher}>
       {siteConfig.lang === "pl" ? "• Go to EN •" : "• Przejdź na PL •"}
     </button>
   );
